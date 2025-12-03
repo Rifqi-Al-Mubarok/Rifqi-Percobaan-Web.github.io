@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Menandakan ini dokumen HTML5 -->
+<html lang="id"> <!-- Awal dokumen HTML, bahasa Indonesia -->
+<head>
+  <meta charset="utf-8"> <!-- Pengaturan karakter UTF-8 agar huruf/angka tampil normal -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Responsif di perangkat mobile -->
+  <title>Formulir Umpan Balik</title> <!-- Judul tab browser -->
+  <link rel="stylesheet" href="style.css"> <!-- Hubungkan CSS eksternal untuk style -->
+</head>
+<body>
+  <div class="container"> <!-- Pembungkus seluruh konten utama -->
+    <header> <!-- Bagian atas halaman, biasanya untuk judul & menu -->
+      <h1>Formulir Umpan Balik</h1> <!-- Judul utama besar -->
+      <p class="subtitle">Kritik, Saran, dan Masukan</p> <!-- Subjudul halaman -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation"> <!-- Navigasi menu utama -->
+        <a href="index.html">Beranda</a> <!-- Link ke halaman utama -->
+        <a href="biodata.html">Biodata</a> <!-- Link ke biodata -->
+        <a href="jadwal.html">Jadwal</a> <!-- Link ke jadwal -->
+        <a href="galeri.html">Galeri</a> <!-- Link ke galeri -->
+        <a href="feedbackk.html" class="active">Feedback</a> <!-- Halaman aktif sekarang -->
+      </nav>
+    </header>
+
+    <!-- Formulir, akan mengirim data ke httpbin.org untuk testing lewat metode POST -->
+    <main>
+      <form class="card" action="https://httpbin.org/post" method="post" novalidate>
+        <h3 class="section-title">Formulir Kontak & Saran</h3> <!-- Judul kecil dalam form -->
+        <p>Berikan masukan terbaik Anda untuk pengembangan website profil ini. Semua input bersifat wajib kecuali nama.</p>
+
+        <!-- Input Nama (opsional) -->
+        <label for="nama">Nama Anda (Opsional):</label> <!-- Label untuk field nama -->
+        <input id="nama" name="nama" type="text" placeholder="Tulis nama Anda"> <!-- Field teks, opsional -->
+
+        <!-- Input Email (wajib) -->
+        <label for="email">Email Anda:</label> <!-- Label untuk email -->
+        <input id="email" name="email" type="email" placeholder="nama@email.com"
+              required aria-required="true" aria-describedby="emailHelp"> <!-- Field email, wajib -->
+        <small id="emailHelp">Contoh: nama@domain.com</small> <!-- Petunjuk input email -->
+
+        <!-- Rating Kepuasan (wajib, angka 1-10) -->
+        <label for="rating">Rating Kepuasan Website (Skala 1–10):</label>
+        <input id="rating" name="rating" type="number" min="1" max="10" placeholder="Masukkan angka 1 hingga 10"
+              required aria-required="true">
+
+        <!-- Rekomendasi, radio button hanya bisa pilih satu -->
+        <fieldset> <!-- Pengelompokan agar radio tertata rapi -->
+          <legend>Rekomendasi Website Ini?</legend>
+          <div class="radio-group" role="radiogroup" aria-labelledby="rekomLegend">
+            <label for="rekom1">
+              <input id="rekom1" name="rekom" type="radio" value="ya" required>
+              Ya, Sangat
+            </label>
+            <label for="rekom2">
+              <input id="rekom2" name="rekom" type="radio" value="mungkin">
+              Mungkin Saja
+            </label>
+            <label for="rekom3">
+              <input id="rekom3" name="rekom" type="radio" value="tidak">
+              Tidak
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Topik Menarik, checkbox bisa pilih lebih dari satu -->
+        <fieldset>
+          <legend>Topik yang paling menarik:</legend>
+          <div class="checkbox-group">
+            <label for="t1">
+              <input id="t1" name="topics[]" type="checkbox" value="biodata">
+              Biodata
+            </label>
+            <label for="t2">
+              <input id="t2" name="topics[]" type="checkbox" value="jadwal">
+              Jadwal
+            </label>
+            <label for="t3">
+              <input id="t3" name="topics[]" type="checkbox" value="galeri">
+              Galeri
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Pilihan bidang pengembangan (dropdown wajib) -->
+        <label for="bidang">Saran Pengembangan di Bidang:</label>
+        <select id="bidang" name="bidang" required>
+          <option value="">-- Pilih Bidang --</option> <!-- Default, harus dipilih -->
+          <option value="uiux">UI/UX</option>
+          <option value="desain">Desain</option>
+          <option value="konten">Konten</option>
+        </select>
+
+        <!-- Pesan/saran lengkap, wajib diisi -->
+        <label for="pesan">Pesan/Saran Lengkap:</label>
+        <textarea id="pesan" name="pesan" placeholder="Tulis pesan dan saran Anda secara detail di sini..." required></textarea>
+
+        <!-- Tombol untuk reset & submit -->
+        <div class="btn-group">
+          <button type="reset" class="reset">Atur Ulang</button> <!-- Kosongkan form -->
+          <button type="submit" class="submit">Kirim Feedback</button> <!-- Kirim ke server -->
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

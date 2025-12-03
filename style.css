@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;            /* Mengatur font halaman menjadi Arial, jika tidak ada diganti sans-serif */
+    background: #f9fafb;                       /* Warna latar belakang abu muda yang lembut */
+    margin: 0;                                 /* Menghilangkan margin bawaan browser di seluruh tepi */
+    padding: 20px;                             /* Memberi jarak antara tepi layar dan konten utama */
+    color: #333;                               /* Warna teks abu tua agar mudah dibaca */
+}
+
+/* ---- KARTU UTAMA ---- */
+.card {
+    width: 720px;                              /* Semua card/kotak lebar fix 720px, jadi seragam */
+    margin: 50px auto 40px auto;               /* Margin atas 50px, bawah 40px, kiri/kanan auto artinya kotak di tengah */
+    padding: 20px;                             /* Ruang dalam card di semua sisi 20px */
+    background: #fff;                          /* Warna dasar kotak putih */
+    border-radius: 10px;                       /* Membuat sudut kotak agak membulat, lebih ramah */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);     /* Bayangan tipis agar kotak terlihat melayang */
+}
+
+.card div {
+    width: 250px;                              /* Setiap div di dalam card lebarnya 250px */
+}
+
+/* Judul Halaman */
+h1 {
+    text-align: center;                        /* Judul utama di tengah halaman */
+    color: #1e3a8a;                            /* Biru tua agar menonjol */
+    margin-bottom: 5px;                        /* Jarak bawah sedikit dari elemen berikutnya */
+}
+
+.subtitle {
+    text-align: center;                        /* Subjudul juga di tengah halaman */
+    color: #6b7280;                            /* Abu sedang agar tidak terlalu kontras */
+    margin-bottom: 30px;                       /* Jarak bawah agak besar supaya terpisah dari konten */
+}
+
+/* Logo */
+.logo {
+    display: block;                            /* Diperlakukan seperti blok agar mudah ditata margin-nya */
+    margin-left: auto;                         /* Tengah secara horizontal (kiri) */
+    margin-right: auto;                        /* Tengah secara horizontal (kanan) */
+    width: 60px;                               /* Ukuran logo 60px */
+    border-radius: 30%;                        /* Sedikit membulatkan logo */
+}
+
+/* Judul Section dalam card */
+.card h3 {
+    margin-top: 10px;                          /* Sedikit jarak atas dari elemen sebelumnya */
+    color: #1d4ed8;                            /* Biru terang supaya fresh dan mudah dibaca */
+}
+
+/* Bagian judul kecil, seperti Biodata, Hobi, dsb */
+.section-title {
+    padding-left: 10px;                        /* Spasi sisi kiri teks */
+    margin-bottom: 20px;                       /* Jarak bawah ke elemen berikutnya */
+    border-left: 4px solid #8f7365;            /* Garis vertikal coklat muda untuk dekorasi */
+    padding-bottom: 5px;                       /* Spasi bawah (tambah sedikit ruang) */
+    padding-left: 5px;                         /* (Duplikat, efektif yang terakhir, minimal 5px) */
+}
+
+/* Foto profil */
+.foto {
+    border-radius: 80px;                       /* Membuat tepi gambar menjadi oval atau lingkaran */
+}
+
+.l {
+    width: 220px;                              /* Ukuran gambar 220px */
+    height: 220px;                             /* Ukuran tinggi gambar 220px */
+    object-fit: cover;                         /* Proporsi gambar tidak pecah, agar pas di kotak */
+    border-radius: 50%;                        /* Sudut gambar jadi lingkaran sempurna */
+    border: 3px solid #e5e7eb;                 /* Border abu terang di sekeliling gambar */
+}
+
+/* List berurut dan tak berurut di dalam card */
+.card ul,
+.card ol {
+    padding-left: 20px;                        /* Indent kiri agar bullet/angka lebih rapi */
+}
+
+/* Class center untuk teks tengah */
+.center {
+    text-align: center;                        /* Tengah-kan isi */
+    margin-top: 20px;                          /* Jarak atas tambahan */
+}
+
+/* Link */
+a {
+    color: #1e40af;                            /* Warna biru tua */
+    text-decoration: none;                     /* Hilangkan garis bawah default pada link */
+}
+a:hover {
+    text-decoration: underline;                /* Link digarisbawahi saat di-hover */
+}
+
+/* NAVBAR, bagian menu utama */
+.box {
+    overflow: hidden;                          /* Jika isi lebih, sembunyikan yang keluar dari kotak */
+    width: 100%;                               /* Kotak penuh se-lebar parent */
+    max-width: 800px;                          /* Maksimal 800px biar tidak ketinggian di layar besar */
+    margin: auto;                              /* Tengah-kan kotak navbar */
+}
+
+.navbar {
+    display: flex;                             /* Susunan menu secara horizontal */
+    justify-content: center;                   /* Semua item rata tengah */
+    align-items: center;                       /* Rata tengah secara vertikal */
+    background: #f9f9f9;                       /* Latar belakang navbar */
+    width: 760px;                              /* Lebar fix navbar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);     /* Efek bayangan ringan */
+    margin: auto;                              /* Tengah-kan ke layar */
+    height: 85px;                              /* Tinggi navbar */
+    gap: 15px;                                 /* Jarak antar menu */
+    margin-bottom: 50px;                       /* Jarak bawah ke konten */
+}
+.navbar a {
+    text-decoration: none;                     /* Hilangkan garis bawah */
+    padding: 12px 16px;                        /* Isi ruang dalam tombol menu */
+    border-radius: 20px;                       /* Tombol bulat seperti pil */
+    border: 1px solid #ddd;                    /* Garis tipis di pinggir */
+    color: #333;                               /* Warna abu tua */
+    font-weight: 500;                          /* Huruf lebih tebal */
+    transition: all 0.3s ease;                 /* Animasi ringan jika di-hover */
+}
+.navbar a:hover {
+    background: #ff0101;                       /* Efek merah saat mouse di atas menu */
+}
+.navbar a.active {
+    background: #1e50b3;                      /* Warna biru untuk tombol aktif */
+    color: white;                              /* Tulisan putih untuk yang aktif */
+    border: 1px solid #1e50b3;                 /* Border biru juga untuk menyatu */
+}
+
+/* ------ FORM ELEMENTS ------- */
+.card label {
+    display: block;                            /* Label selalu di baris sendiri */
+    margin-top: 15px;                          /* Jarak atas antar label */
+    font-weight: 600;                          /* Huruf tebal sedang */
+}
+.card input,
+.card select,
+.card textarea {
+    width: 96%;                                /* Field mengisi 96% area, biar agak masuk dari tepi */
+    padding: 10px;                             /* Padding dalam biar nyaman diketik */
+    margin-top: 5px;                           /* Jarak atas antara label dan field */
+    border: 1px solid #d1d5db;                 /* Border abu muda */
+    border-radius: 6px;                        /* Sudut rounded biar friendly */
+    font-size: 14px;                           /* Huruf sedang */
+}
+
+/* GROUPS RADIO & CHECKBOX */
+.radio-group, .checkbox-group {
+    display: flex;                             /* Susun horizontal */
+    gap: 15px;                                 /* Jarak antar group */
+    margin-top: 8px;                           /* Jarak ke label/atas */
+    align-items: center;                       /* Sejajarkan tengah vertikal */
+    flex-wrap: wrap;                           /* Pindah ke baris bawah jika sempit */
+}
+.radio-group label, .checkbox-group label {
+    display: flex;                             /* Label dan icon berdampingan */
+    align-items: center;                       /* Vertikal tengah */
+    gap: 6px;                                  /* Spasi antara icon dan teks */
+    cursor: pointer;                           /* Kursor jadi tangan saat di-hover */
+    font-weight: 500;                          /* Huruf agak tebal */
+    white-space: nowrap;                       /* Supaya teks nggak melorot ke bawah */
+}
+
+/* Textarea Form */
+.card textarea {
+    height: 120px;                             /* Tinggi tertentu agar mudah menulis */
+    resize: none;                              /* Tidak bisa diubah ukurannya */
+}
+
+/* Tombol Form */
+.btn-group {
+    width: 100%;                               /* Tombol melebar ke seluruh lebar kotak */
+    background-color: #fff;                    /* Latar belakang tombol sama seperti card */
+    display: flex;                             /* Susun tombol secara horizontal */
+    justify-content: end;                      /* Posisi tombol di kanan bawah */
+    align-items: end;                          /* Vertikal bawah jika banyak tombol */
+    gap: 10px;                                 /* Jarak antar tombol */
+    margin-top: 20px;                          /* Jarak atas tombol dari form */
+}
+button {
+    padding: 10px 18px;                        /* Ukuran tombol biar enak di-klik */
+    border: none;                              /* Hilangkan border tombol asli bawaan browser */
+    border-radius: 6px;                        /* Cenderung membulat biar nyaman */
+    font-weight: 600;                          /* Huruf tebal */
+    cursor: pointer;                           /* Pointer tangan untuk tombol */
+}
+button.reset {
+    background: #72777e;                       /* Abu gelap untuk tombol reset */
+    color: white;                              /* Tulisan putih */
+}
+button.submit {
+    background: #1e50b3;                      /* Biru untuk tombol kirim/submit */
+    color: white;
+}
+button:hover {
+    opacity: 0.9;                              /* Sedikit redup jika di-hover */
+}
+
+/* MENU PILIHAN ATAS */
+.nav-band {
+    border-top: 1px solid #eceff3;             /* Garis atas abu tipis */
+    border-bottom: 1px solid #eceff3;          /* Garis bawah abu tipis */
+    padding: 18px 0;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 14px;                                 /* Jarak antar tombol menu */
+    align-items: center;
+}
+
+.menu-btn {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #222;
+    padding: 10px 22px;
+    border-radius: 30px;                       /* Pil */
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.menu-btn:hover {
+    transform: translateY(-1px);               /* Efek naik saat hover */
+    background: #f4f6fa;                       /* Sedikit lebih abu */
+}
+
+.menu-btn.active {
+    background: #1e50b3;                      /* Biru saat aktif */
+    color: #fff;
+    border-color: #1e50b3;
+    box-shadow: 0 6px 18px rgba(30,80,179,0.15);   /* Bayangan biru */
+}
+
+/* Gallery */
+.gallery {
+    width: 20px;                              /* Ukuran tetap galeri jika ada (edit ini sesuai kebutuhan galeri gambar kamu) */
+}
+
+/* ----------- TABLE JADWAL ----------- */
+.jadwal-table {
+    width: 720px;                             /* Tabel jadwal lebar tetap 720px agar sama dg card di atas */
+}
+table {
+    width: 100%;                              /* Table penuh container jadwal-table */
+    border-collapse: collapse;                 /* Hilangkan garis antar sel */
+    font-size: 15px;                          /* Ukuran font sedang */
+    border-radius: 8px;                        /* Sudut membulat */
+    overflow: hidden;                          /* Sudut table rapih */
+}
+thead tr:first-child,
+thead tr:nth-child(2) {
+    background: #1e3a8a;                      /* Judul head tabel biru tua */
+    color: #fff;                              /* Teks putih */
+}
+th, td {
+    border: 1px solid #e5e7eb;                /* Garis sel abu tipis */
+    padding: 12px 10px;
+    text-align: center;
+}
+th {
+    font-weight: 600;                         /* Judul tabel semua tebal */
+}
+tbody td:nth-child(1),
+tbody td:nth-child(2) {
+    background: #f3f6fb;                      /* Kolom 1 dan 2 abu muda agar mudah dibaca */
+    font-weight: 500;
+}
+tbody tr:nth-child(even) {
+    background: #fafbfc;                      /* Baris genap abu muda untuk zebra stripes */
+}
+tbody tr:hover {
+    background: #f1f5f9;                      /* Efek hover pada baris tabel */
+}

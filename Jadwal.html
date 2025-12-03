@@ -1,0 +1,82 @@
+<!DOCTYPE html> <!-- Mendefinisikan dokumen HTML5 -->
+<html lang="id"> <!-- Awal dokumen HTML berbahasa Indonesia -->
+<head>
+    <meta charset="utf-8" /> <!-- Karakter UTF-8 supaya tulisan tidak error -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsif di hp/tablet -->
+    <title>Jadwal Harian Santri</title> <!-- Judul tab browser -->
+    <link rel="stylesheet" href="style.css" /> <!-- Hubungkan CSS eksternal -->
+</head>
+<body>
+    <div class="page-wrap"> <!-- Pembungkus halaman utama (bisa diatur jika ingin float/footer dll) -->
+
+    <!-- Judul Halaman -->
+    <div class="container"> <!-- Pembungkus utama judul/subjudul -->
+        <h1>Jadwal Harian Santri</h1> <!-- Judul utama besar halaman -->
+        <p class="subtitle">Pekan ini: MateriHTML & CSS</p> <!-- Subjudul -->
+    </div>
+
+    <!-- Navigasi/menu -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Beranda</a> <!-- Menu ke beranda -->
+            <a href="biodata.html">Biodata</a> <!-- Menu ke biodata -->
+            <a href="jadwal.html" class="active">Jadwal</a> <!-- Menu aktif -->
+            <a href="galeri.html">Galeri</a> <!-- Menu ke galeri -->
+            <a href="feedbackk.html">Feedback</a> <!-- Menu ke feedback -->
+        </nav>
+    </header>
+
+    <div class="card"> <!-- Card utama untuk isi jadwal -->
+        <h3 class="section-title">Jadwal Kegiatan Pagi - Sore</h3> <!-- Judul section card tabel -->
+        <div class="table-wrap"> <!-- Pembungkus tabel supaya bisa tambahkan scroll/responsif jika perlu -->
+            <table class="jadwal-table" role="table">
+                <thead>
+                    <!-- Header tabel baris 1: "Waktu" span 2 kolom, "Hari" dan "Kegiatan" span 2 row -->
+                    <tr class="thead-top">
+                        <th class="thead-top1" colspan="2">Waktu</th> <!-- Kolom waktu, gabung 2 kolom: Mulai dan Selesai -->
+                        <th rowspan="2">Hari</th> <!-- Kolom Hari, menempati 2 baris header ke bawah -->
+                        <th rowspan="2">Kegiatan</th> <!-- Kolom Kegiatan, menempati 2 baris header ke bawah -->
+                    </tr>
+                    <!-- Header tabel baris 2: "Mulai" dan "Selesai", mengisi 2 kolom dari "Waktu" -->
+                    <tr class="thead-sub">
+                        <th>Mulai</th> <!-- Jam mulai -->
+                        <th>Selesai</th> <!-- Jam selesai -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">08:00</td> <!-- Jam mulai -->
+                        <td class="time">10:00</td> <!-- Jam selesai -->
+                        <td rowspan="5" class="day">Selasa & Rabu</td> <!-- Kolom hari, gabung 5 baris ke bawah -->
+                        <td class="activity">Belajar Bahasa Arab</td> <!-- Kegiatan -->
+                    </tr>
+
+                    <tr>
+                        <td class="time">10:00</td>
+                        <td class="time">Dzuhur</td>
+                        <td class="activity">Istirahat (Bebas)</td>
+                    </tr>
+
+                    <tr>
+                        <td class="time">Ba'da Dzuhur</td>
+                        <td class="time">01:00</td>
+                        <td class="activity">Makan & Bebas</td>
+                    </tr>
+
+                    <tr>
+                        <td class="time">01:00</td>
+                        <td class="time">Ashar</td>
+                        <td class="activity">Belajar Bahasa Arab</td>
+                    </tr>
+
+                    <tr>
+                        <td class="time">Ba'da Ashar</td>
+                        <td class="time">Sebelum Magrib</td>
+                        <td class="activity">Bebas & Makan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Deklarasi bahwa dokumen ini menggunakan HTML5 -->
+<html lang="id"> <!-- Menentukan bahasa utama halaman adalah Bahasa Indonesia -->
+<head>
+  <meta charset="UTF-8" /> <!-- Menetapkan encoding karakter UTF-8 agar semua huruf & simbol tampil dengan benar -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Agar tampilan web bersifat responsif di perangkat mobile -->
+  <title>Profil Santri</title> <!-- Judul halaman yang muncul di tab browser -->
+  <link rel="stylesheet" href="style.css" /> <!-- Menghubungkan halaman ke file CSS eksternal bernama style.css -->
+</head>
+
+<body> <!-- Awal bagian isi (konten) halaman yang akan ditampilkan di browser -->
+  <div class="box"> <!-- Kontainer utama pembungkus seluruh isi halaman -->
+
+    <img src="image/logo.png" alt="Logo" class="logo" /> <!-- Gambar logo sekolah, dengan kelas 'logo' untuk styling CSS -->
+
+    <h1>HSI Boarding School Purworejo</h1> <!-- Judul utama halaman / institusi -->
+
+    <p class="subtitle">Website Profil Sederhana — Kelas X</p> <!-- Subjudul di bawah judul utama -->
+
+
+    <header> <!-- Bagian kepala halaman yang biasanya berisi navigasi -->
+      <nav class="navbar"> <!-- Elemen navigasi dengan class 'navbar' untuk styling -->
+        <a href="index.html" class="active">Beranda</a> <!-- Tautan menu aktif (halaman saat ini) -->
+        <a href="biodata.html">Biodata</a> <!-- Tautan ke halaman biodata -->
+        <a href="Jadwal.html">Jadwal</a> <!-- Tautan ke halaman jadwal -->
+        <a href="Galeri.html">Galeri</a> <!-- Tautan ke halaman galeri -->
+        <a href="feedbackk.html">Fedback</a> <!-- Tautan ke halaman feedback (catat: ada salah ejaan, sebaiknya 'feedback.html') -->
+      </nav>
+    </header>
+
+
+    <div class="card"> <!-- Kartu pertama: container untuk teks pengantar -->
+      <h3 class="section-title">Pengantar</h3> <!-- Judul kecil untuk bagian pengantar -->
+      <p>
+        Selamat datang di website profil sederhana saya.<br> <!-- Baris 1 paragraf pengantar dan <br> artinya pindah baris tanpa paragraf baru -->
+        Situs ini berisi biodata, hobi, dan cita-cita saya sebagai siswa HSI
+        Boarding School Purworejo.<br> <!-- <br> digunakan lagi untuk jeda baris -->
+        Silakan jelajahi halaman biodata untuk mengenal saya lebih dekat. <!-- Kalimat penutup pengantar -->
+      </p>
+    </div>
+
+
+    <div class="card"> <!-- Kartu kedua: berisi informasi tentang masjid impian -->
+      <h3 class="section-title">Masjid Impian</h3> <!-- Judul bagian kedua -->
+      <p>Berikut adalah masjid yang dibangun oleh Nabi dan para sahabatnya ketika pembangunan pertama:</p> <!-- Kalimat pengantar untuk gambar -->
+
+      <img class="foto" src="https://www.haramainvoyages.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-12-at-13.01.55.jpeg"
+          width="150" alt="Masjid Nabawi"> <!-- Gambar masjid dengan ukuran 150px dan alt text jika gambar gagal dimuat -->
+
+      <br> <!-- Pindah baris setelah gambar -->
+
+      <p>
+        Saya berharap suatu saat bisa <b>sholat di masjid tersebut</b>, <!-- <b> menebalkan teks penting -->
+        masjid yang jika kita sholat di dalamnya maka 
+        <i>pahala akan dilipatgandakan</i> <!-- <i> membuat teks miring untuk penekanan -->
+        hingga <u>10.000x</u> <!-- <u> memberikan garis bawah pada teks -->
+        dibandingkan dengan masjid lain, 
+        <s>dan saya berisik di dalamnya</s>. <!-- <s> menandai teks yang dicoret (contoh: humor atau revisi) -->
+      </p>
+    </div>
+
+  </div> <!-- Penutup kontainer utama (.box) -->
+</body>
+</html> <!-- Penutup dokumen HTML -->
